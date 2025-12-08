@@ -316,7 +316,7 @@
                 <h2 class="title is-3">What is SecureAgent?</h2>
                 <div class="content has-text-justified">
                     <p>
-                        AI agents are becoming a key platform for deploying LLMs in real-world applications, with technological advances enabling automation and decision-making for complex tasks. However, their integration with critical systems (e.g., automated shopping, automated finance) introduces new security risks—uncontrollable inputs, opaque logic, and dynamic environments expose them to attacks such as fraud or workflow hijacking. Companies are in urgent need of discovering vulnerabilities in agents and building a robust security framework to ensure their secure deployment. Therefore, we developed SecureAgent. SecureAgent is an open-source agent security verification system that uses AI-driven adversarial attack methods to test potential risks in current agent platforms. Our code is available in the following link:
+                        AI agents are becoming a key platform for deploying LLMs in real-world applications, with technological advances enabling automation and decision-making for complex tasks. However, their integration with critical systems (e.g., automated shopping, automated finance) introduces new security risks—uncontrollable inputs, opaque logic, and dynamic environments expose them to attacks such as fraud or workflow hijacking. Companies are in urgent need of discovering vulnerabilities in agents and building a robust security framework to ensure their secure deployment. Therefore, we developed SecureAgent. SecureAgent is an <strong>open-source</strong> agent security verification system that uses AI-driven adversarial attack methods to test potential risks in current agent platforms. Our code is available in the following link:
                     </p>
                 </div>
                 <div class="tab-github-link">
@@ -703,13 +703,7 @@
                     <li data-tab="tab2">
                         <a>
                             <span class="icon is-small"><i class="fas fa-bug"></i></span>
-                            <span>Implement Attack</span>
-                        </a>
-                    </li>
-                    <li data-tab="tab3">
-                        <a>
-                            <span class="icon is-small"><i class="fas fa-flask"></i></span>
-                            <span>Test Attack</span>
+                            <span>Sample Generation</span>
                         </a>
                     </li>
                     <li data-tab="tab4">
@@ -743,7 +737,7 @@
                 <!-- Tab 2: Implement a attack demo -->
                 <div class="tab-pane" id="tab2">
                     <div class="tab-box">
-                        <h3 class="title is-4">Implement a attack demo</h3>
+                        <h3 class="title is-4">Generate attack samples</h3>
                         <div class="content">
                             <p>
                                 Learn how to implement various attack scenarios to understand potential vulnerabilities in AI agent systems. Understanding these techniques is crucial for building robust defense mechanisms.
@@ -764,26 +758,6 @@
                     </div>
                 </div>
                 
-                <!-- Tab 3: Test the attack demo -->
-                <div class="tab-pane" id="tab3">
-                    <div class="tab-box">
-                        <h3 class="title is-4">Test the attack demo</h3>
-                        <div class="tab-content-with-image">
-                            <div class="content">
-                                <p>
-                                    Execute and evaluate the attack demonstrations against your AI agent in a controlled testing environment. This phase allows you to measure the impact of the attack, analyze system responses, and identify critical vulnerabilities.
-                                </p>
-                                <p>
-                                    You can utilize automated testing tools to execute multiple attack scenarios and compare the results. The testing environment is isolated to ensure safe experimentation without affecting production systems.
-                                </p>
-                            </div>
-                            <div class="tab-image">
-                                <img src="static/images/test.png" alt="Test Attack Demo">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
                 <!-- Tab 4: Deploy/test your defense/attack methods -->
                 <div class="tab-pane" id="tab4">
                     <div class="tab-box">
@@ -791,7 +765,7 @@
                         <div class="tab-content-with-image">
                             <div class="content">
                                 <p>
-                                    Deploy your custom defense mechanisms and conduct comprehensive security testing. This final stage enables you to implement protective measures, validate their effectiveness, and iterate on your security strategy. You can also develop custom attack methods to further strengthen your agent's resilience.
+                                    Test the attack samples we generated to evaluate their effectiveness and understand potential vulnerabilities in your AI agent system. Deploy your custom defense mechanisms and conduct comprehensive security testing. This final stage enables you to implement protective measures, validate their effectiveness, and iterate on your security strategy. Develop custom attack methods to further strengthen your agent's resilience.
                                 </p>
                             </div>
                             <div class="tab-image">
@@ -817,22 +791,38 @@
                     <div class="scenario-image">
                         <img src="static/images/searching.png" alt="Searching Scenario">
                     </div>
+                    <p class="image-label">Original Operation</p>
+                    <div class="scenario-image">
+                        <img src="static/images/asearching.png" alt="Searching Attack Scenario">
+                    </div>
+                    <p class="image-label">After Attack</p>
                     <h3 class="scenario-title">Searching</h3>
                     <p class="scenario-description">
-                        Secure and accurate search operations.
+                        After the attack, clicking the search box changed to clicking “Email”.
                     </p>
                 </div>
             </div>
             
             <!-- Shopping Card -->
             <div class="column">
-                <div class="scenario-card">
-                    <div class="scenario-image">
-                        <img src="static/images/shopping.png" alt="Shopping Scenario">
+                <div class="scenario-card scenario-card-horizontal">
+                    <div class="scenario-images-row">
+                        <div class="scenario-image-column">
+                            <div class="scenario-image">
+                                <img src="static/images/jd.png" alt="Shopping Scenario">
+                            </div>
+                            <p class="image-label">Original Operation</p>
+                        </div>
+                        <div class="scenario-image-column">
+                            <div class="scenario-image">
+                                <img src="static/images/ajd.png" alt="Shopping Attack Scenario" class="img-align-right">
+                            </div>
+                            <p class="image-label">After Attack</p>
+                        </div>
                     </div>
                     <h3 class="scenario-title">Shopping</h3>
                     <p class="scenario-description">
-                        Secure and intelligent trading and shopping activities.
+                        After the attack, clicking the tab page changed to clicking “Me” in the bottom right.
                     </p>
                 </div>
             </div>
@@ -843,9 +833,14 @@
                     <div class="scenario-image">
                         <img src="static/images/booking.png" alt="Booking Scenario">
                     </div>
+                    <p class="image-label">Original Operation</p>
+                    <div class="scenario-image">
+                        <img src="static/images/abooking.png" alt="Booking Attack Scenario">
+                    </div>
+                    <p class="image-label">After Attack</p>
                     <h3 class="scenario-title">Booking</h3>
                     <p class="scenario-description">
-                        Secure and reliable travel booking.
+                        After the attack, clicking “My Bookings” changed to clicking the left-side tab.
                     </p>
                 </div>
             </div>

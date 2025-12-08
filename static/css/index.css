@@ -1048,6 +1048,56 @@ body {
   flex-grow: 1;
 }
 
+/* Image Label Style */
+.image-label {
+  font-size: 0.85rem;
+  color: #667eea;
+  font-weight: 500;
+  text-align: center;
+  margin: 0.25rem 0 0.75rem 0;
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+  border-radius: 4px;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Scenario card 内的图片与标签间距调整 */
+.scenario-card .scenario-image {
+  margin-bottom: 0.25rem;
+}
+
+/* Shopping Card 左右布局样式 */
+.scenario-card-horizontal .scenario-images-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  /* 高度与其他卡片的双图区域对齐：160px * 2 + 标签高度 + 间距 */
+  min-height: 405px;
+}
+
+.scenario-card-horizontal .scenario-image-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scenario-card-horizontal .scenario-image-column .scenario-image {
+  width: 100%;
+  height: 370px;
+  margin-bottom: 0.25rem;
+}
+
+.scenario-card-horizontal .scenario-image-column .image-label {
+  margin: 0.25rem 0 0 0;
+}
+
+/* 图片显示右侧部分 */
+.img-align-right {
+  object-position: right center !important;
+}
+
 /* 移动端响应式设计 */
 @media screen and (max-width: 768px) {
   .scenario-cards {
